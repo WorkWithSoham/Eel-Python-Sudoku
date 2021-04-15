@@ -28,7 +28,14 @@ function fill_values(puzzle) {
     for (var i = 0; i < 9; i++) {
         for (var j = 0; j < 9; j++) {
             id = 'cell-' + String((i * 9 + j));
-            document.getElementById(id).value = puzzle[i][j];
+            if (puzzle[i][j] == 0){
+                document.getElementById(id).value = "";
+                document.getElementById(id).disabled = false;
+            } else {
+                document.getElementById(id).value = puzzle[i][j];
+                document.getElementById(id).disabled = true;
+            }
+            
         }
     }
 }
