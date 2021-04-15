@@ -4,6 +4,7 @@ Run the following command initially to make use of the application.
 <br>
 <br>
 => pip3 install eel
+<br>
 => python3 main.py
 <br>
 <hr>
