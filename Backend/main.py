@@ -4,11 +4,6 @@ import Sudoku_solver
 
 eel.init('Frontend')
 
-# Change 'brave' to the browser installed in your machine.
-# E.g
-# 'chrome' => Google Chrome => Default
-# 'edge' => Microsoft Edge
-
 @eel.expose
 def generate(diff):
     '''
@@ -23,11 +18,15 @@ def solve(SudokuPuzzle):
     '''
         Takes the unsolved Sudoku and returns the solved one
     '''
-    
     if not Sudoku_solver.solveSudoku(SudokuPuzzle):
         return False
 
     return SudokuPuzzle
+
+# Change 'brave' to the browser installed in your machine.
+# E.g
+# 'chrome' => Google Chrome => Default
+# 'edge' => Microsoft Edge
 
 # Define all the require functions above the start method
 eel.start('index.html')
